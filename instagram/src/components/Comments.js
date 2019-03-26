@@ -1,11 +1,11 @@
 import React from "react";
+import "./Comments.css"
 
 let Comments = (props) => {
 
     return(
-        <div>
-            <p>{props.username}</p>
-            <p>{props.text}</p>
+        <div class="com">
+            <p class="comm"><span>{props.username}</span> {props.text}</p>
         </div>
        
         
