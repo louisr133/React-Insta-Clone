@@ -6,11 +6,11 @@ import "./SearchBar.css";
 let SearchBar = () => {
     return(
         <div className ="search">
-            <div class = "logo">
-                <img class="pic" src="https://cdn130.picsart.com/259430940027212.png?r1024x1024" alt ="ig-pic"/>
+            <div className = "logo">
+                <img className="pic" src="https://cdn130.picsart.com/259430940027212.png?r1024x1024" alt ="ig-pic"/>
 
                 <div className="split"></div>
-                <img class="ig-logo" src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt="logo"/>
+                <img className="ig-logo" src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt="logo"/>
 
             </div>
             

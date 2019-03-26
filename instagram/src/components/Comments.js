@@ -4,8 +4,8 @@ import "./Comments.css"
 let Comments = (props) => {
 
     return(
-        <div class="com">
-            <p class="comm"><span>{props.username}</span> {props.text}</p>
+        <div className="com">
+            <p className="comm"><span>{props.username}</span> {props.text}</p>
         </div>
        
         

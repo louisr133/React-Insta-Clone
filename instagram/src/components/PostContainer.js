@@ -6,7 +6,7 @@ import CommentSection from "./CommentSection";
 let PostContainer = (props) => {
     return(
         props.dummyData.map((i, index) => (
-            <div class="duh">
+            <div className="duh">
                 <Posts
                     username = {i.username}
                     thumbnailUrl= {i.thumbnailUrl}
@@ -14,8 +14,7 @@ let PostContainer = (props) => {
                     timestamp ={i.timestamp}
                     likes = {i.likes}
                     comments={i.comments}
-                    
-                    key={index}
+                    key = {index}
                 />
                 {/* <CommentSection comments={i.comments}/> */}
             </div>
