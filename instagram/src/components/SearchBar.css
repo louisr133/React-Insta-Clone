@@ -1,0 +1,55 @@
+.search {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 26px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    box-sizing: border-box;
+}
+input{
+    background-color: #fafafa;
+    height:12px;
+    padding: 7px;
+    width: 199px;
+    border-radius: 3px;
+    border: solid 1px #dbdbdb;
+    text-align: center;
+    font-size: 15px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+.ig-logo{
+    height: 35px;
+    width: 113px;
+}
+
+.pic {
+    height: 35px;
+    width: 35px;
+}
+.split {
+    background-color: #262626;
+    margin: 0 16px;
+    width:1px;
+    height: 28px;
+}
+
+.fa-compass:before {
+    font-size: 24px;
+}
+.fa-user:before {
+    font-size: 24px;
+}
+.fa-heart:before {
+    font-size: 24px;
+
+}
+
+.icons i {
+    margin-left: 30px;
+
+}

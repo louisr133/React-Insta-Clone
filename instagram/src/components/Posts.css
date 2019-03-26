@@ -1,0 +1,36 @@
+.posts {
+    max-width: 614px;
+    margin: 25px auto;
+    text-align: left;
+    border: 1px solid #efefef;
+    
+    box-sizing: border-box;
+    
+}
+
+.imgUrl {
+    width: 614px;
+}
+
+.username {
+    margin-left: 16px;
+}
+.picUser {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 16px;
+    box-sizing: border-box;
+
+}
+
+.picUser img{
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+}
+
+.far {
+    font-size: 24px;
+    margin-left: 15px;
+}
