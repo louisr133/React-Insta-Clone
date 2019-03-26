@@ -2,11 +2,13 @@
     max-width: 616px;
     margin: 25px auto;
     text-align: left;
-    border: 1px solid #efefef;
+    border: 2px solid #efefef;
     
     box-sizing: border-box;
     
 }
+
+
 
 .imgUrl {
     width: 614px;
@@ -33,4 +35,9 @@
 .far {
     font-size: 24px;
     margin-left: 15px;
+}
+
+.duh{
+    padding: 25px 0;
+    background: #fafafa;
 }

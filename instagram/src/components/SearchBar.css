@@ -60,3 +60,11 @@ input{
     height: 30px;
 
 }
+
+.postButt {
+    border-style: dotted;
+    height: 30px;
+    position: relative;
+    float: right;
+    bottom: 30px;
+}

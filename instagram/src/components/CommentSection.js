@@ -14,7 +14,7 @@ let CommentSection = (props) => {
             {/* <input className="addCom" placeholder="Add Comment..."></input> */}
             <form>
                 <input
-                    className="addComm"
+                    className="addCom"
                     type="text"
                     value={props.text}
                     name="text"
@@ -22,7 +22,7 @@ let CommentSection = (props) => {
                     onChange={props.handleChanges} 
                 />
 
-            <button onClick={props.updateList}>Add To Item</button>
+            <button class="postButt" onClick={props.updateList}>Post</button>
         </form>   
         </div>
     )

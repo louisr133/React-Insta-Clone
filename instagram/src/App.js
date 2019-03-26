@@ -12,9 +12,6 @@ class App extends Component {
     this.state = {
       data: dummyData,
     };
-
-
-
   }
 
 
@@ -22,10 +19,12 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <Postcontainer 
-          class ="posted" 
-          dummyData = {this.state.data} 
-        />
+        <div className="duh">
+          <Postcontainer 
+            class ="posted" 
+            dummyData = {this.state.data} 
+          />
+        </div>
       </div>
     );
   }
