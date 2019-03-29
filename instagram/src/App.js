@@ -11,34 +11,37 @@ class App extends Component {
 
     this.state = {
       data: [],
-      username: '',
+      search: '',
     };
   }
 
   handleSearch = (e) => {
      
     this.setState({
-     username: e.target.value,
+     search: e.target.value,
     })
 
-    
-}
+  }
 
   updateSearch = (e) =>{
-  e.preventDefault();
-  if(this.state.username === ""){
-    this.setState({
-      data: dummyData,
-    })
-  } else {
-     this.setState({
-      data: dummyData.filter(user => user.username.includes(this.state.username) === true ),
-    });
-  }
+    e.preventDefault();
+    if(this.state.search === ""){
+      this.setState({
+        data: dummyData,
+      })
+    } else {
+      this.setState({
+        data: dummyData.filter(user => user.username.includes(this.state.search) === true ),
+      });
+
+    }
+
 }    
 
   componentDidMount(){
-    this.setState({data: dummyData});
+    this.setState({
+      data: dummyData,
+    });
   }
 
   render() {

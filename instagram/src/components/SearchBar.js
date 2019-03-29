@@ -24,7 +24,7 @@ let SearchBar = (props) => {
                     onChange={props.search} 
                 />
 
-            <button class="" onClick={props.updateSearch}>Post</button>
+            <button class="" onClick={props.updateSearch}>Search</button>
         </form>  
 
             <div className = "icons">

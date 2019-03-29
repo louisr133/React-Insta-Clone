@@ -15,8 +15,8 @@ let PostContainer = (props) => {
                     likes = {i.likes}
                     comments={i.comments}
                     key = {index}
+          
                 />
-                {/* <CommentSection comments={i.comments}/> */}
             </div>
             )
         )

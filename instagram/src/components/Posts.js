@@ -5,7 +5,6 @@ import CommentSection from "./CommentSection"
 class Posts extends React.Component {
     constructor(props){
         super(props);
-
         this.state = {
             thumbnailUrl: props.thumbnailUrl,
             username: props.username,
@@ -14,37 +13,46 @@ class Posts extends React.Component {
             comments: props.comments,
             
         }
-
-
-        this.addLike = () => {
-            this.setState({likes: this.state.likes+1})
-        }
-
-        this.handleChanges = event => {
-            event.preventDefault();
-            this.setState({
-                [event.target.name]: event.target.value,
-            });
-          };
-      
-          
-
-          this.updateList = event => {
-            console.log(event)
-            event.preventDefault();
-            const comments = {
-              username: this.state.username,
-              text: this.state.text,
-      
-            };
-      
-            this.setState({
-              comments: [...this.state.comments,comments]
-            });
-            // console.log(this.state.tdl);
-          };
-
     }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.username !== this.props.username){
+            this.setState({
+                thumbnailUrl: nextProps.thumbnailUrl,
+                username: nextProps.username,
+                imageUrl: nextProps.imageUrl,
+                likes: nextProps.likes,
+                comments: nextProps.comments,
+            });
+        }
+    }
+
+    addLike = () => {
+        this.setState({likes: this.state.likes+1})
+    }
+
+    handleChanges = event => {
+        event.preventDefault();
+        this.setState({
+            [event.target.name]: event.target.value,
+        });
+
+        
+      };
+  
+    updateList = event => {
+        event.preventDefault();
+        const comments = {
+          username: this.state.username,
+          text: this.state.text,
+  
+        };
+  
+        this.setState({
+          comments: [...this.state.comments,comments]
+        });
+      };
+
 
     render(){
 
@@ -58,7 +66,7 @@ class Posts extends React.Component {
                     <img className="imgUrl" src = {this.state.imageUrl} alt="images"/>
                     <i className = "far fa-heart" onClick={this.addLike}></i><i className = "far fa-comment"></i>
                     <p className="comm">Liked by <span>{this.state.likes}</span> others </p>
-                    {/* <p>{props.timestamp}</p> */}
+                    {/* <p>{state.timestamp}</p> */}
                     
                     <CommentSection 
                         comments={this.state.comments}
