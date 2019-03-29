@@ -3,18 +3,29 @@ import "./SearchBar.css";
 
 
 
-let SearchBar = () => {
+let SearchBar = (props) => {
     return(
         <div className ="search">
-            <div class = "logo">
-                <img class="pic" src="https://cdn130.picsart.com/259430940027212.png?r1024x1024" alt ="ig-pic"/>
+            <div className = "logo">
+                <img className="pic" src="https://cdn130.picsart.com/259430940027212.png?r1024x1024" alt ="ig-pic"/>
 
                 <div className="split"></div>
-                <img class="ig-logo" src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt="logo"/>
+                <img className="ig-logo" src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt="logo"/>
 
             </div>
             
-             <input type="text" id="name" name="name" placeholder=' Search' />
+            <form>
+                <input
+                    className=""
+                    type="text"
+                    value={props.users.username}
+                    name="username"
+                    placeholder="Search"
+                    onChange={props.search} 
+                />
+
+            <button class="" onClick={props.updateSearch}>Post</button>
+        </form>  
 
             <div className = "icons">
                 <i className ="far fa-compass"></i>
