@@ -1,69 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from "./components/SearchBar"
-import Postcontainer from "./components/PostContainer"
-import dummyData from "./dummy-data"
+import loggedIn from './authenticate/loggedIn';
+import Login from './authenticate/Login';
+import Logged from './authenticate/Logged';
 
+
+const AnonComponent = loggedIn(Logged)(Login)
 
 class App extends Component {
   constructor(){
     super()
 
     this.state = {
-      data: [],
-      search: '',
+      logged: false,
     };
   }
 
-  handleSearch = (e) => {
-     
+  handleLogin = () => {
     this.setState({
-     search: e.target.value,
+      logged: true,
     })
-
-  }
-
-  updateSearch = (e) =>{
-    e.preventDefault();
-    if(this.state.search === ""){
-      this.setState({
-        data: dummyData,
-      })
-    } else {
-      this.setState({
-        data: dummyData.filter(user => user.username.includes(this.state.search) === true ),
-      });
-
-    }
-
-}    
-
-  componentDidMount(){
-    this.setState({
-      data: dummyData,
-    });
   }
 
   render() {
     return (
-      <div className="App">
-        
-        <SearchBar 
-          search={this.handleSearch}
-          users={this.state.data}
-          updateSearch={this.updateSearch}
-        />
-
-        <div className="duh">
-
-          <Postcontainer 
-            class ="posted" 
-            dummy = {this.state.data} 
-          />
-
-        </div>
-
-      </div>
+      <AnonComponent logged={this.state.logged} handleLogin = {this.handleLogin}/>
     );
   }
 }
