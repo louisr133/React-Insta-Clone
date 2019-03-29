@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 
 
-let SearchBar = () => {
+let SearchBar = (props) => {
     return(
         <div className ="search">
             <div className = "logo">
@@ -14,7 +14,18 @@ let SearchBar = () => {
 
             </div>
             
-             <input type="text" id="name" name="name" placeholder=' Search' />
+            <form>
+                <input
+                    className=""
+                    type="text"
+                    value={props.users.username}
+                    name="username"
+                    placeholder="Search"
+                    onChange={props.search} 
+                />
+
+            <button class="" onClick={props.updateSearch}>Post</button>
+        </form>  
 
             <div className = "icons">
                 <i className ="far fa-compass"></i>

@@ -10,21 +10,56 @@ class App extends Component {
     super()
 
     this.state = {
-      data: dummyData,
+      data: [],
+      username: '',
     };
   }
 
+  handleSearch = (e) => {
+     
+    this.setState({
+     username: e.target.value,
+    })
+
+    
+}
+
+  updateSearch = (e) =>{
+  e.preventDefault();
+  if(this.state.username === ""){
+    this.setState({
+      data: dummyData,
+    })
+  } else {
+     this.setState({
+      data: dummyData.filter(user => user.username.includes(this.state.username) === true ),
+    });
+  }
+}    
+
+  componentDidMount(){
+    this.setState({data: dummyData});
+  }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        
+        <SearchBar 
+          search={this.handleSearch}
+          users={this.state.data}
+          updateSearch={this.updateSearch}
+        />
+
         <div className="duh">
+
           <Postcontainer 
             class ="posted" 
-            dummyData = {this.state.data} 
+            dummy = {this.state.data} 
           />
+
         </div>
+
       </div>
     );
   }

@@ -5,7 +5,8 @@ import "./Posts.css"
 
 let PostContainer = (props) => {
     return(
-        props.dummyData.map((i, index) => (
+        props.dummy.map((i, index) => (
+            <div className="duh">
                 <Posts
                     username = {i.username}
                     thumbnailUrl= {i.thumbnailUrl}
@@ -15,6 +16,8 @@ let PostContainer = (props) => {
                     comments={i.comments}
                     key = {index}
                 />
+                {/* <CommentSection comments={i.comments}/> */}
+            </div>
             )
         )
 

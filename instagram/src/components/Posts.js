@@ -15,6 +15,7 @@ class Posts extends React.Component {
             
         }
 
+
         this.addLike = () => {
             this.setState({likes: this.state.likes+1})
         }
